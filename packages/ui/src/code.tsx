@@ -1,11 +1,20 @@
-import { JSX } from "react";
+import React, { JSX } from "react";
 
-export function Code({
-    children,
-    className,
-  }: {
-    children: React.ReactNode;
-    className?: string;
-  }): JSX.Element {
-    return <code className={className}>{children}</code>;
-  }
+export function Card({
+  title,
+  children,
+}: {
+  title: string;
+  children?: React.ReactNode;
+}): JSX.Element {
+  return (
+    <div
+      className="border p-6 bg-white rounded-xl bg-[#ededed]"
+    >
+      <h1 className="text-xl border-b pb-2">
+        {title}
+      </h1>
+      <p>{children}</p>
+    </div>
+  );
+}

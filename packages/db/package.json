@@ -7,9 +7,13 @@
   },
   "devDependencies": {
     "@types/node": "^22.13.14",
-    "prisma": "^6.5.0"
+    "prisma": "^6.5.0",
+    "ts-node": "^10.9.2"
   },
   "exports": {
     "./client": "./index.ts"
+  },
+  "prisma": {
+    "seed": "ts-node prisma/seed.ts"
   }
 }
